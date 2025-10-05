@@ -25,12 +25,11 @@ def register_handlers(app: Client):
     async def send_start_menu(message, user):
         text = f"""
 
-   ✨ Hello {user}! ✨
+   ✨ Hey {user}!
 
-👋 I am Nomad 🤖 
+👋 I am Erza 🤖 
 
 Highlights:
-─────────────────────────────
 - Smart Anti-Spam & Link Shield
 - Adaptive Lock System (URLs, Media, Language & more)
 - Modular & Scalable Protection
@@ -73,12 +72,12 @@ Highlights:
 # ==========================================================
     async def send_help_menu(message):
         text = """
-╔══════════════════╗
-     Help Menu
-╚══════════════════╝
+╔═════════════════╗
+      Help Menu
+╚═════════════════╝
 
 Choose a category below to explore commands:
-─────────────────────────────
+──────────────────────────
 """
         buttons = InlineKeyboardMarkup([
             [
@@ -117,9 +116,9 @@ Choose a category below to explore commands:
     @app.on_callback_query(filters.regex("greetings"))
     async def greetings_callback(client, callback_query):
         text = """
-╔══════════════════╗
-    ⚙ Welcome System
-╚══════════════════╝
+╔═════════════════╗
+ ⚙ Welcome System
+╚═════════════════╝
 
 Commands to Manage Welcome Messages:
 
@@ -149,9 +148,9 @@ Example:
     @app.on_callback_query(filters.regex("locks"))
     async def locks_callback(client, callback_query):
         text = """
-╔══════════════════╗
-     ⚙ Locks System
-╚══════════════════╝
+╔═════════════════╗
+ ⚙ Locks System
+╚═════════════════╝
 
 Commands to Manage Locks:
 
@@ -185,7 +184,7 @@ Example:
         try:
             text = """
 ╔══════════════════╗
-      ⚙️ Moderation System
+ ⚙️ Moderation System
 ╚══════════════════╝
 
 Manage your group easily with these tools:
